@@ -13,6 +13,9 @@ OUTPUT: 	PCA plot
 			Test data prediction accuracy
 USAGE: execute from terminal
 			`python3 pcasvm.py`
+
+Modified from Towards Data Science, Galarnyk M. Original code available at 
+https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
 ==================================================================
 """
 
@@ -99,7 +102,8 @@ ax.grid()
 plt.savefig("2 component PCA.jpg")
 plt.show()
 
-print("PCA EXPLAINED VARIANCE RATIO: %s" % pca.explained_variance_ratio_)	# accounts for how much variance?
+# accounts for how much variance?
+print("PCA EXPLAINED VARIANCE RATIO: %s" % pca.explained_variance_ratio_)	
 
 ##########################################################
 

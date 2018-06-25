@@ -3,7 +3,7 @@
 AUTHOR: HIEN VU
 LAST MODIFIED: 14-06-18
 ==================================================================
-SplitS data into test and training data (4:1) for SVM
+Splits data into test and training data (4:1) for SVM
 INPUT: 		spec.csv (containing all data)
 OUTPUT: 	spectest.csv (containing test data)
 			spectrain.csv (containing training data)
