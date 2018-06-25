@@ -1,4 +1,20 @@
+"""
+==================================================================
+AUTHOR: HIEN VU
+LAST MODIFIED: 27-05-18
+==================================================================
+Performs support vector machine classification on 2 dimensional 
+NAE spectral data
+INPUT: 		PCA_2component_train.csv (training data after PCA)
+			PCA_2component_test.csv (test data after PCA)
+OUTPUT: 	SVM models for 4 kernels (Linear, LinearSVM, Radial 
+			Basis Function, Polynomial)
+			Prediction accuracy for test data
 
+Modified from scikit-learn.org. Original code available at
+http://scikit-learn.org/stable/auto_examples/svm/plot_iris.html
+==================================================================
+"""
 
 import csv
 import numpy as np
@@ -104,6 +120,7 @@ def pca_svm(filename):
 
 	return models
 
+# Predict for test data
 def predict(filename, models):
 	with open(filename, 'r') as f:
 		reader = csv.reader(f)
@@ -112,10 +129,12 @@ def predict(filename, models):
 	actual = data[:, 2]
 	X = data[:, :2].astype(np.float)
 
+	# write results to new csv
 	g = open("predictions.csv", 'w')
 	writer = csv.writer(g)
 	writer.writerow(['PC1','PC2', 'model', 'prediction', 'actual'])
 
+	# calculate accuracy for each class
 	accuracy = [0]*4
 	for i in range(len(X)):
 		entry = X[i]
