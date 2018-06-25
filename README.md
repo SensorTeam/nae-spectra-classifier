@@ -8,7 +8,7 @@ Extracts NAE spectral data from images taken with diffraction grating and classi
 * `virtualenv`
 
 # Test data
-Available at https://drive.google.com/open?id=1mjlEYTSTyxorV57096HSg7lqMBvd3tR3
+Available at https://goo.gl/xV2AWD
 
 # Usage
 1. Setup a virtual environment using the command `virtualenv venv`
