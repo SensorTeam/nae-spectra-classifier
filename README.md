@@ -18,18 +18,18 @@ Available at https://drive.google.com/open?id=1mjlEYTSTyxorV57096HSg7lqMBvd3tR3
 
 ## Obtaining calibration values from known wavelength light source
 	`python3 calib.py -f path-to-image`
-		Test file: calibration.jpg
+		Test file: data/calibration.jpg
 (NB: To obtain calibration values, using output files and look for peaks 
 at known wavelengths. For example, for a mercury lamp, use peak at 
 546.1nm. Take corresponding pixel value to input for get_spectrum.py)
 
 ## Extracting spectra from an image
 	`python main.py -i path-to-image -c class`
-		Test file: sample.tiff, class=blue
+		Test file: data/sample.tiff, data/class=blue
 
 ## Plotting obtained spectra
 	`python3 plot.py -f path-to-csv-file`
-		Test files: spec.csv, specblue.csv
+		Test files: data/spec.csv, data/specblue.csv
 
 ## Splitting data into training and test data
 	`python3 split.py`
